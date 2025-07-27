@@ -2,16 +2,16 @@
 
 body {
     background-color: snow;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     font-family: 'Prompt', sans-serif;
 }
 
 .container {
     margin: auto;
-    margin-top: 50px;
+    margin-top: 20px;
     max-width: 1920px;
-    padding: 0 15px;
+    padding: 0 10px;
 }
 
 .text-center {
@@ -21,8 +21,8 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -15px;
-    margin-right: -15px;
+    margin-left: -10px;
+    margin-right: -10px;
 }
 
 .justify-center {
@@ -42,15 +42,14 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.125);
     border-radius: 0.5rem;
     box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
-    padding-top: 25px;
-    padding-bottom: 25px;
+    padding: 15px;
+    margin: 10px;
 }
 
 .card-body {
     flex: 1 1 auto;
-    padding: 1rem;
-    margin-left: 20px;
-    margin-right: 20px;
+    padding: 0.75rem;
+    margin: 0 10px;
 }
 
 .card-text {
@@ -60,11 +59,9 @@ body {
 .card-img {
     width: 100%;
     max-width: 150px;
-    /* จำกัดขนาดรูปภาพ */
     height: auto;
     border-radius: 0.25rem;
     margin: 0.5rem;
-    /* ปรับ margin สำหรับแกลเลอรี */
     display: block;
 }
 
@@ -73,7 +70,6 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 10px;
-    /* ระยะห่างระหว่างรูปภาพ */
 }
 
 .width-25 {
@@ -99,12 +95,12 @@ body {
     background-color: transparent;
     border-collapse: collapse;
     font-family: 'Prompt', sans-serif;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .table th,
 .table td {
-    padding: 0.75rem;
+    padding: 0.5rem;
     vertical-align: top;
     border-top: 1px solid #dee2e6;
 }
@@ -113,7 +109,7 @@ body {
     vertical-align: bottom;
     border-bottom: 2px solid #dee2e6;
     background-color: #f3f2f7;
-    padding-top: 20px;
+    padding-top: 15px;
 }
 
 .table tbody+tbody {
@@ -140,10 +136,46 @@ body {
     -webkit-overflow-scrolling: touch;
 }
 
-@media (max-width: 767.98px) {
-    .table-responsive {
-        overflow-x: auto;
-    }
+.navbar {
+    background-color: #f3f2f7;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.navbar-links a {
+    margin-left: 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+.table-container {
+    margin: 10px 0;
+}
+
+.empty-cell {
+    border: none;
+    background: none;
 }
 
 .carlen-pink {
@@ -181,54 +213,70 @@ body {
     border-color: #f4cccc;
 }
 
-/* เพิ่มสไตล์สำหรับ Navbar */
-.navbar {
-    background-color: #f3f2f7;
-    padding: 15px 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
+/* Media Queries สำหรับ responsiveness */
+@media (max-width: 992px) {
 
-.navbar-logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #333;
-}
+    .width-25,
+    .width-50,
+    .width-75,
+    .width-100 {
+        width: 100%;
+    }
 
-.navbar-links a {
-    margin-left: 20px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
-}
+    .card {
+        margin: 5px;
+        padding: 10px;
+    }
 
-.navbar-links a:hover {
-    color: #007bff;
-}
-
-/* ปรับแต่งตาราง */
-.table-container {
-    margin-top: 20px;
-}
-
-.empty-cell {
-    border: none;
-    background: none;
+    .container {
+        margin-top: 10px;
+        padding: 0 5px;
+    }
 }
 
 @media (max-width: 767.98px) {
     .navbar {
         flex-direction: column;
         gap: 10px;
+        padding: 8px 10px;
+    }
+
+    .navbar-logo {
+        font-size: 1rem;
     }
 
     .navbar-links a {
-        margin-left: 10px;
-        margin-right: 10px;
+        margin: 0 5px;
+        font-size: 0.8rem;
+    }
+
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-body {
+        padding: 0.5rem;
+        margin: 0 5px;
+    }
+
+    .table th,
+    .table td {
+        padding: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+
+    p {
+        font-size: 0.85rem;
+    }
+
+    .row {
+        margin-left: -5px;
+        margin-right: -5px;
     }
 }

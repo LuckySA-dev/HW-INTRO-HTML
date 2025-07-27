@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    background-color: snow;
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+}
+
+.container {
+    margin: auto;
+    margin-top: 50px;
+    max-width: 1920px;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.justify-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    background-color: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.card-body {
+    flex: 1 1 auto;
+    padding: 1rem;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.card-text {
+    margin-bottom: 1rem;
+}
+
+.card-img {
+    width: 100%;
+    max-width: 150px;
+    /* จำกัดขนาดรูปภาพ */
+    height: auto;
+    border-radius: 0.25rem;
+    margin: 0.5rem;
+    /* ปรับ margin สำหรับแกลเลอรี */
+    display: block;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    /* ระยะห่างระหว่างรูปภาพ */
+}
+
+.width-25 {
+    width: 25%;
+}
+
+.width-50 {
+    width: 50%;
+}
+
+.width-75 {
+    width: 75%;
+}
+
+.width-100 {
+    width: 100%;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse;
+    font-family: 'Prompt', sans-serif;
+    font-size: 1rem;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f3f2f7;
+    padding-top: 20px;
+}
+
+.table tbody+tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.table-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media (max-width: 767.98px) {
+    .table-responsive {
+        overflow-x: auto;
+    }
+}
+
+.carlen-pink {
+    background-color: #ffe5ee;
+    border-color: violet;
+}
+
+.carlen-green {
+    background-color: #d9ead3;
+    border-color: green;
+}
+
+.carlen-orange {
+    background-color: #f9cb9c;
+    border-color: orange;
+}
+
+.carlen-blue {
+    background-color: #cfe2f3;
+    border-color: blue;
+}
+
+.carlen-yellow {
+    background-color: #fff2cc;
+    border-color: yellow;
+}
+
+.carlen-purple {
+    background-color: #ead1dc;
+    border-color: purple;
+}
+
+.carlen-red {
+    background-color: #f4cccc;
+    border-color: #f4cccc;
+}
+
+/* เพิ่มสไตล์สำหรับ Navbar */
+.navbar {
+    background-color: #f3f2f7;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #333;
+}
+
+.navbar-links a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.navbar-links a:hover {
+    color: #007bff;
+}
+
+/* ปรับแต่งตาราง */
+.table-container {
+    margin-top: 20px;
+}
+
+.empty-cell {
+    border: none;
+    background: none;
+}
+
+@media (max-width: 767.98px) {
+    .navbar {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar-links a {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}
